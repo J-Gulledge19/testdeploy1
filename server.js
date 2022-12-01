@@ -8,7 +8,7 @@ app.get("/", (request, response) => {
 });
 
 app.get("/dburl", (request, response) => {
-  response.send('My connection string is: mongo');
+  response.send(`My connection string is: ${process.env.DATABASE_URL}`);
 });
 
 app.listen(PORT, () => {
